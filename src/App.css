@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+/* src/styles.css */
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.hero{
+  display: flex;
+  height: 100vh;
+  background: url('Desktop - 4.png') no-repeat center center/cover;
+
+}
+
+
+nav {
+  
+  position: fixed; /* Make the nav bar fixed at the top */
+  top: 0; /* Align the nav bar to the top of the window */
+  left: 0; /* Align the nav bar to the left */
+  width: 100%; /* Make the nav bar span the full width of the window */
+  height: 50px;
+  background: #000000;
+  border-radius: 0; /* Remove border-radius for full-width effect */
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  padding-left: 900px; /* Add some padding */
+  z-index: 10000;
+}
+
+nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px; /* Add some space between nav items */
+}
+
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  background: linear-gradient(to right, rgb(218, 86, 209), orange);
+
+  border-radius: 15px; /* Remove border-radius for full-width effect */
+  transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1) {
+  width: 110px;
+}
+
+nav .start-home, nav a:nth-child(1):hover~.animation {
+  width: 130px;
+  left: 890px;
+}
+
+nav a:nth-child(2) {
+  width: 110px;
+}
+
+nav a:nth-child(2):hover~.animation {
+  width: 110px;
+  left: 1030px;
+}
+
+nav a:nth-child(3) {
+  width: 110px;
+}
+
+nav a:nth-child(3):hover~.animation {
+  width: 110px;
+  left: 1160px;
+}
+
+nav a:nth-child(4) {
+  width: 110px;
+}
+
+nav a:nth-child(4):hover~.animation {
+  width: 120px;
+  left: 1280px;
+}
+
+
+.hero-content {
+
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.hero h2 {
+  /*color:linear-gradient(to right, rgb(218, 86, 209), orange);*/
+  color: rgb(245, 141, 22);
+  font-weight: 800;
+  line-height: 70px;
+  font-size: 70px;
+  padding-left: 100px;
+}
+.hero h5 {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  line-height: 10px;
+  font-size: 50px;
+  padding-left: 180px;
+}
+.hero p {
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  padding-left: 100px;
+  max-width: 800px;
+}
+
+.herosec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100vh;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: flex-end; /* Align the image to the bottom */
+  justify-content: flex-end; /* Shift the image to the right */
+}
+
+.hero-image img {
+  max-width: 60%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Reduce the height */
+  margin-left: 350px;
+}
+.aboutme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  
+}
+.box {
+  background-color: #846883;
+  text-align: center;
+  height: 500px;
+  margin: 80px;
+  border-radius: 15px;
+}
+
+.box h2 {
+  padding-top: 40px;
+  color: orange;
+  margin-top: 0;
+  font-size: 65px;
+}
+
+.box p {
+  padding: 50px;
+
+  color: white;
+  margin-bottom: 0;
+  font-size: 32px;
+  max-width: 800px;
+  text-align: justify;
+}
+.about-image {
+  flex: 0 0 40%; /* Flex-basis to control the width of the image container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.services-section {
+  padding: 60px; /* Adding padding around the section */
+  padding-top: 120px; /* Adding extra top padding to prevent overlap with the navbar */
+  text-align: center;
+  background-color: #000000;
+}
+
+.services-heading {
+  font-size: 75px; /* Increased font size */
+  margin-bottom: 90px;
+  color: orange;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #000000;
+}
+
+.service-box {
+  height: 370px;
+  position: relative;
+  width: calc(25% - 50px);
+  
+  padding: 20px;
+  background: linear-gradient(to right, rgba(69, 53, 67, 0.5), orange );
+  
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #a39999f1;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgb(156, 153, 153);
+}
+
+.image-container {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 160px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.service-box h3 {
+  margin-top: 100px; /* Adjusted to account for the image */
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 27px;
+  
+}
+
+.service-box p {
+  text-align: justify;
+  margin-top: 30px;
+  color: #ffffff;
+}
+.service-box:nth-child(1) {
+  margin-left: 30px;
+  background: linear-gradient(to right, rgba(82, 11, 73, 0.5), rgb(130, 97, 37) );
+}
+.service-box:nth-child(2) {
+  background: linear-gradient(to right, rgba(82, 11, 73, 0.5), rgb(130, 97, 37) );
+}
+.service-box:nth-child(3) {
+  background: linear-gradient(to right, rgba(82, 11, 73, 0.5), rgb(130, 97, 37) );
+  }
+.service-box:nth-child(4) {
+  background: linear-gradient(to right, rgba(82, 11, 73, 0.5), rgb(130, 97, 37) );
+  margin-right: 30px;
+  
+}
+.service-box button{
+  padding: 3px;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 12px;
+  background-color: black;
+  color: #ffffff;
+}
